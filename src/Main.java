@@ -37,14 +37,15 @@ public class Main {
         //Задача 4
 
         byte carProductivityForTwoMinutes = 16;
-        byte timeOneMinutes = 20;
-        short timeTwoMinutes = 1440;
-        short timeThreeMinutes = 4320;
-        int timeFourMinutes = 43200;
-        int carProductivityOne = carProductivityForTwoMinutes * timeOneMinutes;
-        int carProductivityTwo = carProductivityForTwoMinutes * timeTwoMinutes;
-        int carProductivityThree = carProductivityForTwoMinutes * timeThreeMinutes;
-        int carProductivityFour = carProductivityForTwoMinutes * timeFourMinutes;
+        byte timeTwentyMinutes = 20;
+        short timeDayMinutes = 1440;
+        short timeThreeDaysMinutes = 4320;
+        int timeMonthMinutes = 43200;
+        int carProductivityForOneMinute = carProductivityForTwoMinutes / 2;
+        int carProductivityOne = carProductivityForOneMinute * timeTwentyMinutes;
+        int carProductivityTwo = carProductivityForOneMinute * timeDayMinutes;
+        int carProductivityThree = carProductivityForOneMinute * timeThreeDaysMinutes;
+        int carProductivityFour = carProductivityForOneMinute * timeMonthMinutes;
         System.out.println("За 20 минут машина произвела " + carProductivityOne + " штук бутылок");
         System.out.println("За сутки машина произвела " + carProductivityTwo + " штук бутылок");
         System.out.println("За 3 дня машина произвела " + carProductivityThree + " штук бутылок");
