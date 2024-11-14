@@ -27,19 +27,19 @@ public class Main {
 
         //Задача 3
 
-        byte studentsClassOne = 23;
-        byte studentsClassTwo = 27;
-        byte studentsClassThree = 30;
-        short sheetsPaper = 480;
-        short sheetsPaperOneStudent = (short) (sheetsPaper / (studentsClassOne + studentsClassTwo + studentsClassThree));
+        int studentsClassOne = 23;
+        int studentsClassTwo = 27;
+        int studentsClassThree = 30;
+        int sheetsPaper = 480;
+        int sheetsPaperOneStudent = sheetsPaper / (studentsClassOne + studentsClassTwo + studentsClassThree);
         System.out.println("На каждого ученика рассчитано " + sheetsPaperOneStudent + " листов бумаги");
 
         //Задача 4
 
-        byte carProductivityForTwoMinutes = 16;
-        byte timeTwentyMinutes = 20;
-        short timeDayMinutes = 1440;
-        short timeThreeDaysMinutes = 4320;
+        int carProductivityForTwoMinutes = 16;
+        int timeTwentyMinutes = 20;
+        int timeDayMinutes = 1440;
+        int timeThreeDaysMinutes = 4320;
         int timeMonthMinutes = 43200;
         int carProductivityForOneMinute = carProductivityForTwoMinutes / 2;
         int carProductivityOne = carProductivityForOneMinute * timeTwentyMinutes;
@@ -53,13 +53,13 @@ public class Main {
 
         //Задача 5
 
-        byte totalPaintCans = 120;
-        byte whitePaintCansOneClass = 2;
-        byte brownPaintCansOneClass = 4;
-        byte commonNumberCansOneClass = (byte) (whitePaintCansOneClass + brownPaintCansOneClass);
-        byte commonNumberClasses = (byte) (totalPaintCans / commonNumberCansOneClass);
-        byte whitePaintCansForClasses = (byte) (commonNumberClasses * whitePaintCansOneClass);
-        byte brownPaintCansForClasses = (byte) (commonNumberClasses * brownPaintCansOneClass);
+        int totalPaintCans = 120;
+        int whitePaintCansOneClass = 2;
+        int brownPaintCansOneClass = 4;
+        int commonNumberCansOneClass = whitePaintCansOneClass + brownPaintCansOneClass;
+        int commonNumberClasses = totalPaintCans / commonNumberCansOneClass;
+        int whitePaintCansForClasses = commonNumberClasses * whitePaintCansOneClass;
+        int brownPaintCansForClasses = commonNumberClasses * brownPaintCansOneClass;
         System.out.println("В школе, где " + commonNumberClasses + " классов нужно " + whitePaintCansForClasses + " банок белой краски и " + brownPaintCansForClasses + " банок коричневой краски");
 
         //Задача 6
@@ -78,7 +78,7 @@ public class Main {
         int eggsWeight = eggs * eggWeight;
         int sportBreakfastGrams = bananasWeight + commonMilkWeight + commonIceCreamWeight + eggsWeight;
         System.out.println("Спортзавтрак спортсмена составляет " + sportBreakfastGrams + " грамм");
-        float sportBreakfastKg = sportBreakfastGrams / 1000f;
+        double sportBreakfastKg = (double) sportBreakfastGrams / 1000;
         System.out.println("Спортзавтрак спортсмена составляет " + sportBreakfastKg + " килограмм");
 
         // Задача 7
@@ -101,17 +101,17 @@ public class Main {
         int yearlyMashaSalary = employeeMashaSalary * monthsYear;
         int yearlyDenisSalary = employeeDenisSalary * monthsYear;
         int yearlyKristinaSalary = employeeKristinaSalary * monthsYear;
-        float yearlyIncrease = 0.1f;
-        float employeeNewMashaSalary = employeeMashaSalary + (employeeMashaSalary * yearlyIncrease);
-        float employeeNewDenisSalary = employeeDenisSalary + (employeeDenisSalary * yearlyIncrease);
-        float employeeNewKristinaSalary = employeeKristinaSalary + (employeeKristinaSalary * yearlyIncrease);
+        double yearlyIncrease = 0.1;
+        double employeeNewMashaSalary = employeeMashaSalary + (employeeMashaSalary * yearlyIncrease);
+        double employeeNewDenisSalary = employeeDenisSalary + (employeeDenisSalary * yearlyIncrease);
+        double employeeNewKristinaSalary = employeeKristinaSalary + (employeeKristinaSalary * yearlyIncrease);
 
-        float yearlyNewMashaSalary = employeeNewMashaSalary * monthsYear;
-        float yearlyNewDenisSalary = employeeNewDenisSalary * monthsYear;
-        float yearlyNewKristineSalary = employeeNewKristinaSalary * monthsYear;
-        float differenceMashaSalary = yearlyNewMashaSalary - yearlyMashaSalary;
-        float differenceDenisSalary = yearlyNewDenisSalary - yearlyDenisSalary;
-        float differenceKristinaSalary = yearlyNewKristineSalary - yearlyKristinaSalary;
+        double yearlyNewMashaSalary = employeeNewMashaSalary * monthsYear;
+        double yearlyNewDenisSalary = employeeNewDenisSalary * monthsYear;
+        double yearlyNewKristineSalary = employeeNewKristinaSalary * monthsYear;
+        double differenceMashaSalary = yearlyNewMashaSalary - yearlyMashaSalary;
+        double differenceDenisSalary = yearlyNewDenisSalary - yearlyDenisSalary;
+        double differenceKristinaSalary = yearlyNewKristineSalary - yearlyKristinaSalary;
         System.out.println("Маша получает теперь " + employeeNewMashaSalary + " рублей в месяц. Годовой доход вырос на " + differenceMashaSalary + " рублей");
         System.out.println("Денис теперь получает " + employeeNewDenisSalary + " рублей в месяц. Годовой доход вырос на " + differenceDenisSalary + " рублей");
         System.out.println("Кристина теперь получает " + employeeNewKristinaSalary + " рублей в месяц. Годовой доход вырос на " + differenceKristinaSalary + " рублей");
